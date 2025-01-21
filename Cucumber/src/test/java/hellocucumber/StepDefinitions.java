@@ -11,9 +11,10 @@ public class StepDefinitions {
     private static PrestaShopActuator prestaShopUser;
     private String webDriver = "webdriver.chrome.driver";
     private String path = "C:\\Users\\nofar\\OneDrive - post.bgu.ac.il\\semester E\\QA\\tasks\\task4\\2025-mbt-e\\Selenium\\chromedriver-win64\\chromedriver.exe";
+    private String admin_path = path;
     private static PrestaShopActuatorAdmin prestaShopManager;
     private WebDriver driver;
-    private String admin_path = "C:\\Users\\yuval\\OneDrive\\Desktop\\studies\\third year\\Semester A\\QS\\ass4\\chromedriver-win64\\chromedriver.exe";
+    //private String admin_path = "C:\\Users\\yuval\\OneDrive\\Desktop\\studies\\third year\\Semester A\\QS\\ass4\\chromedriver-win64\\chromedriver.exe";
 
     public void PrestaShopInitUser() {
         System.out.println("--------------- INITIALIZING PRESTASHOP TEST - USER SESSION ---------------");
