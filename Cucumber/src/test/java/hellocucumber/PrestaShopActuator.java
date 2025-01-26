@@ -150,6 +150,8 @@ public class PrestaShopActuator {
         String currentUrl = driver.getCurrentUrl();
         System.out.println("URL: " + currentUrl);
 
+        driver.quit();
+
         // Verify that the URL contains "/order-confirmation"
         return currentUrl.contains("/order-confirmation");
     }
