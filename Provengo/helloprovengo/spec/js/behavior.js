@@ -1,19 +1,16 @@
 /* @provengo summon selenium */
 
 /**
- * This story opens a new browser window, goes to google.com, and searches for "Pizza".
+ * Admin path: Update product quantity
  */
-bthread('Search', function () {
-  let s = new SeleniumSession('search').start(URL)
-  composeQuery(s, { text: 'Pizza' })
-  startSearch(s)
-})
 
-/**
- * This story opens a new browser window, goes to google.com, and searches for "Pasta" using the "I Feel Lucky" feature.
- */
-bthread('Feeling lucky', function () {
-  let s = new SeleniumSession('lucky').start(URL)
-  composeQuery(s, { text: 'Pasta' })
-  feelLucky(s)
-})
+const Admin_selemiumsessiom = new SeleniumSession("AdminSession")
+bthread('Admin change product quantity', function() {
+    with (Admin_selemiumsessiom) {
+        open_prestashop_admin(Admin_selemiumsessiom);
+        loginAsAdmin(Admin_selemiumsessiom);
+        navigateToCatalog(Admin_selemiumsessiom);
+        selectProduct(Admin_selemiumsessiom);
+        updateMaxQuantity(Admin_selemiumsessiom);
+    }
+});

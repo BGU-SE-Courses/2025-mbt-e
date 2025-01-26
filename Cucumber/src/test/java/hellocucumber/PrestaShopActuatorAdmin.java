@@ -76,5 +76,4 @@ public class PrestaShopActuatorAdmin {
             throw new RuntimeException("Stock quantity " + curr_stock + " is not equal to 1");
         }
     }
-
 }

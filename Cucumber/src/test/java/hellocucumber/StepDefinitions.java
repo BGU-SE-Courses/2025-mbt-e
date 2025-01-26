@@ -67,8 +67,8 @@ public class StepDefinitions {
         prestaShopManager.loginAsAdmin();
     }
 
-    @When("Admin navigates to the product Hummingbird notebook in the Products catalog page")
-    public void adminNavigatesToTheProductHummingbirdNotebookInTheProductsCatalogPage() {
+    @When("Admin navigates to the product in the Products catalog page")
+    public void adminNavigatesToTheProductInTheProductsCatalogPage() {
         prestaShopManager.navigateToCatalog();
         prestaShopManager.selectProduct();
     }
